@@ -1,0 +1,276 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+/* Logo */
+header .logo h1 {
+    font-size: 24px;
+    margin: 0;
+    font-style: italic;
+}
+
+/* Header right section */
+header .header-right {
+    display: flex;
+    align-items: center;
+}
+
+/* Cart and Favorites buttons */
+header .header-right button {
+    margin-right: 10px;
+    padding: 8px 16px;
+    background-color: #ff6f61;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+header .header-right button:hover {
+    background-color: #ff4a3d;
+}
+
+/* Navigation Bar */
+
+
+/* Navbar List */
+.navbar-list {
+    list-style-type: none;
+    display: flex;
+}
+
+.navbar-list li {
+    margin: 0 15px;
+}
+
+.navbar-list li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.navbar-list li a:hover {
+    color: #ff6f61;
+}
+
+/* Hamburger Menu (hidden by default) */
+.hamburger-menu {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger-menu .bar {
+    width: 25px;
+    height: 2px;
+    margin: 4px 0;
+    background-color: white;
+}
+
+/* Mobile Sidebar */
+.hamburger-content {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -250px; /* Hidden off the screen by default */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    transition: right 0.3s ease;
+}
+
+.hamburger-content.active {
+    display: flex;
+    right: 0;
+
+}
+
+.hamburger-content ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.hamburger-content ul li {
+    padding: 15px 0;
+}
+
+.hamburger-content ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.hamburger-content ul li a:hover {
+    color: #ff6f61;
+}
+
+
+
+/* Media Query for Mobile (below 768px) */
+@media screen and (max-width: 768px) {
+    .navbar-list {
+        display: none;  /* Hide main navigation on mobile */
+    }
+
+
+    .hamburger-menu {
+        display: flex;  /* Show hamburger menu on mobile */
+    }
+
+
+}
+/* Hero Section */
+.hero {
+    background-image: url('../assets/home.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    height: 150vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+}
+
+/* About Us Section */
+.about {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Shop Section */
+.shop {
+    padding: 2rem;
+    text-align: center;
+}
+
+.shop h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.shop-items {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.shop-item {
+    background-color: #fff;
+    padding: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shop-item img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.shop-item button {
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.shop-item button:hover {
+    background-color: #555;
+}
+
+/* Contact Us Section */
+.contact {
+    padding: 2rem;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact input, .contact textarea {
+    width: 80%;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact button {
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.contact button:hover {
+    background-color: #555;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    
+    
+      
+}
+
+footer .footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer .social-links a {
+    color: white;
+    margin: 0.5rem;
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+    color: #f39c12;
+}
